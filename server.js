@@ -6,11 +6,14 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
 var PORT = 6969;
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
-
 
 // Initialize Express
 var app = express();
@@ -22,18 +25,14 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Static file support with public folder
-app.use(express.static("public"));
+app.use(express.static("views"));
 
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Database configuration for mongoose
 // db: week18day3mongoose
 mongoose.connect("mongodb://localhost/week18day3mongoose");
-
-// Set Handlebars.
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
 // Hook mongoose connection to db
 var db = mongoose.connection;
@@ -48,6 +47,9 @@ db.once("open", function() {
     console.log("Mongoose connection successful.");
 });
 
+//Routing initiated
+require("./routes/api-routing");
+require("./routes/html-routing");
 
 // Starts the server to begin listening
 // =============================================================

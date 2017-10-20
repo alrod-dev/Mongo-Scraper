@@ -1,7 +1,12 @@
+// Author: Alfredo Rodriguez
+// File: JS - api-routing.js
+// Date: 10/20/2017
+
 // Routes
 // ======
 // Dependencies
 var express = require("express");
+var Example = require("../controller/article_controller");
 
 // Initialize Express
 var app = express();
