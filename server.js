@@ -6,9 +6,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var methodOverride = require("method-override");
 
-// Set Handlebars.
-var exphbs = require("express-handlebars");
 
 var PORT = 6969;
 
@@ -24,11 +23,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-// Static file support with public folder
-app.use(express.static("views"));
+// Override with POST having ?_method=DELETE
+app.use(methodOverride("_method"));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
 // Database configuration for mongoose
 // db: week18day3mongoose
@@ -38,18 +35,29 @@ mongoose.connect("mongodb://localhost/week18day3mongoose");
 var db = mongoose.connection;
 
 // Log any mongoose errors
-db.on("error", function(error) {
+db.on("error", function (error) {
     console.log("Mongoose Error: ", error);
 });
 
 // Log a success message when we connect to our mongoDB collection with no issues
-db.once("open", function() {
+db.once("open", function () {
     console.log("Mongoose connection successful.");
 });
 
 //Routing initiated
-require("./routes/api-routing");
-require("./routes/html-routing");
+require("./routes/api-routing")(app);
+require("./routes/html-routing")(app);
+
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+// Static file support with public folder
+app.use(express.static("views"));
+
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
+
+
 
 // Starts the server to begin listening
 // =============================================================
