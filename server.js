@@ -6,7 +6,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var methodOverride = require("method-override");
+var path = require("path");
 
 
 var PORT = 6969;
@@ -23,8 +23,14 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-// Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+// Static file support with public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
 
 
 // Database configuration for mongoose
@@ -47,16 +53,6 @@ db.once("open", function () {
 //Routing initiated
 require("./routes/api-routing")(app);
 require("./routes/html-routing")(app);
-
-// Set Handlebars.
-var exphbs = require("express-handlebars");
-
-// Static file support with public folder
-app.use(express.static("views"));
-
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
-app.set("view engine", "handlebars");
-
 
 
 // Starts the server to begin listening
