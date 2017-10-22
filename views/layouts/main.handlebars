@@ -1,25 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <link rel="stylesheet" type="text/css" href= "{{css}}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{{css}}">
 
     <link rel="icon" href="{{icon}}">
-
 
     <title>{{title}}</title>
 
 </head>
-<body>
+
+<body cz-shortcut-listen="true">
+
+
+<!--Nav Bar In All Pages-->
+<nav id="navbar" role="navigation">
+    <div class="nav-wrapper container">
+
+        <a id="logo-container" href="/" class="brand-logo">Mongo Scrapper</a>
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/articles-saved">Saved Articles</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="/articles-saved">Saved Articles</a></li>
+        </ul>
+
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+
+<!--Renders body of Index or Articles Saved-->
 {{{ body }}}
+
+
+<!--Footer In All Pages-->
+
+<footer class="page-footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col l6 s12">
+                <h5 class="white-text">Application Info</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+                    our full time job. Any amount would help support and continue development on this project and is
+                    greatly appreciated.</p>
+
+
+            </div>
+
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+
+
+
+                    <div class="col s4"><a class="waves-effect waves-light btn-floating btn-large social github"
+                           href="https://github.com/alrod909" target="_blank"><i class="fa fa-github"></i></a>
+                    </div>
+
+                    <div class="col s4"><a class="waves-effect waves-light btn-floating btn-large social linkedin"
+                           href="https://www.linkedin.com/in/alfredo-wiesner" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    </div>
+
+
+                    <div class="col s4">
+                        <a class="waves-effect waves-light btn-floating btn-large social stack-overflow"
+                           href="https://stackoverflow.com/users/7982074/alfredo-rodriguez"
+                           target="_blank">
+                        <i class="fa fa-stack-overflow"></i></a>
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            Copyright © 2017 <a class="brown-text text-lighten-3" href="https://www.linkedin.com/in/alfredo-wiesner">Alfredo
+            Rodriguez</a>
+        </div>
+    </div>
+
+</footer>
+
+
+<!--  Scripts-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+<div class="hiddendiv common"></div>
+<div class="drag-target" data-sidenav="nav-mobile"></div>
+
+
 </body>
 </html>

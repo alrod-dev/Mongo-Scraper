@@ -1,5 +1,70 @@
-h1
+/*
+Nav Bar/Header Styling
+*/
+
+#navbar
 {
-    text-align: center;
-    color: red;
+    background-color: #0B0C10;
+}
+
+nav ul a:hover {
+    background-color: #66FCF1;
+    color: #1F2833;
+}
+
+.material-icons
+{
+    color: #66FCF1;
+}
+
+.side-nav
+{
+    transform: translateX(-100%);
+}
+
+.drag-target
+{
+    left: 0px;
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+}
+
+/*
+Body
+*/
+
+#banner1
+{
+    display: block;
+    transform: translate3d(-50%, 227px, 0px);
+    filter: brightness(85%);
+}
+
+
+
+/*
+Footer
+*/
+
+.page-footer
+{
+    background-color: #0B0C10;
+}
+
+.waves-light
+{
+    background-color: #1F2833;
+}
+
+
+.waves-light:hover
+{
+    background-color: #66FCF1;
+    color: #1F2833;
+}
+
+.social:hover
+{
+    background-color: #45A29E;
 }
