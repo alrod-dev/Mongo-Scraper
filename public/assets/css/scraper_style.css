@@ -4,7 +4,7 @@ Nav Bar/Header Styling
 
 #navbar
 {
-    background-color: #0B0C10;
+    background-color: #1F2833;
 }
 
 nav ul a:hover {
@@ -13,6 +13,11 @@ nav ul a:hover {
 }
 
 .material-icons
+{
+    color: #474B4F;
+}
+
+.material-icons:hover
 {
     color: #66FCF1;
 }
@@ -27,7 +32,7 @@ nav ul a:hover {
     left: 0px;
     touch-action: pan-y;
     -webkit-user-drag: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /*
@@ -41,7 +46,16 @@ Body
     filter: brightness(85%);
 }
 
+.header
+{
+    color: white;
+    margin-top: 5%;
+}
 
+.notIndex
+{
+    margin-top: 18%;
+}
 
 /*
 Footer
@@ -49,12 +63,13 @@ Footer
 
 .page-footer
 {
-    background-color: #0B0C10;
+    background-color: #1F2833;
+    padding-bottom: 20px;
 }
 
 .waves-light
 {
-    background-color: #1F2833;
+    background-color: #474B4F;
 }
 
 
