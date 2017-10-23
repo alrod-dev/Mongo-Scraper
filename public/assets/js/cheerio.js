@@ -1,38 +1,45 @@
-// Students: Using this template, the cheerio documentation,
-// and what you've learned in class so far, scrape a website
-// of your choice, save information from the page in a result array, and log it to the console.
 
-var cheerio = require("cheerio");
 
-module.exports = function (request) {
+// require packages needed for scraping data
+var cheerio = require('cheerio');
 
-// Make a request call to grab the HTML body from the site of your choice
-    request("http://www.nytimes.com/sports", function (error, response, html) {
-
-        // Load the HTML into cheerio and save it to a variable
-        // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+module.exports = function(request)  {
+    // Make a request for the news section of mlb.com
+    request("https://www.wsj.com/news/business", function (error, response, html) {
+        var genre = 'business';
+        // Load the html body from request into cheerio
         var $ = cheerio.load(html);
 
-        // An empty array to save the data that we'll scrape
-        var results = [];
+        // initiate an empty entry object
+        var data = [];
+        // For each article element with a "buckets-bottom" class
+        $("div.buckets-bottom article").each(function (i, element) {
 
-        // Select each element in the HTML body from which you want information.
-        // NOTE: Cheerio selectors function similarly to jQuery's selectors,
-        // but be sure to visit the package's npm page to see how it works
-        $(".stream").each(function (i, element) {
 
-            var link = $(element).children().attr("href");
-            var title = $(element).children();
 
-            // Save these results in an object that we'll push into the results array we defined earlier
-            results.push({
-                title: title,
-                link: link
+            // add the title , url, content and image to the object
+            var headline = $(element).children('header.hedgroup').children('h2').children('a').text();
+            var content =$(element).children('div.text-wrapper').children('p').text();
+            var link =  $(element).children('header.hedgroup').children('h2').children('a').attr('href');
+            var image = $(element).children('.media-wrapper').children('.image-wrapper').children('a').children('img').attr('src');
+
+
+            data.push({
+
+                title: headline,
+                text: content,
+                link: link,
+                img: image
+
             });
+
+
+
         });
 
-        // Log the results once you've looped through each of the elements found with cheerio
-        console.log(results);
+        console.log(data)
+
     });
+
 
 };
