@@ -4,14 +4,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS  -->
+    <!--CSS Templates-->
+
+    <!-- Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Compiled and minified CSS -->
+    <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
+    <!--Bootstrap Font Awesome Icons-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <!--Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{css}}">
 
     <link rel="icon" href="{{icon}}">
@@ -53,7 +57,6 @@
 
 
 <!--Footer In All Pages-->
-
 <footer class="page-footer">
 
     <div class="container">
@@ -65,32 +68,33 @@
                 <p class="grey-text text-lighten-4">This Web Application scrapes articles from
                     selected websites using the cheerio-scrapper API. The articles are then saved (to the
                     users choosing) into a Mongo database and can be commented on.
-                used </p>
+                    used </p>
 
 
             </div>
 
+            <!--Social Media Links/Icons-->
             <div class="col l3 s12">
                 <h5 class="white-text">Connect</h5>
 
 
+                <div class="col s4"><a class="waves-effect btn-floating btn-large social github"
+                                       href="https://github.com/alrod909" target="_blank"><i
+                        class="fa fa-github"></i></a>
+                </div>
 
-                    <div class="col s4"><a class="waves-effect btn-floating btn-large social github"
-                           href="https://github.com/alrod909" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
-
-                    <div class="col s4"><a class="waves-effect btn-floating btn-large social linkedin"
-                           href="https://www.linkedin.com/in/alfredo-wiesner" target="_blank"><i
-                            class="fa fa-linkedin"></i></a>
-                    </div>
+                <div class="col s4"><a class="waves-effect btn-floating btn-large social linkedin"
+                                       href="https://www.linkedin.com/in/alfredo-wiesner" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                </div>
 
 
-                    <div class="col s4">
-                        <a class="waves-effect btn-floating btn-large social stack-overflow"
-                           href="https://stackoverflow.com/users/7982074/alfredo-rodriguez"
-                           target="_blank">
+                <div class="col s4">
+                    <a class="waves-effect btn-floating btn-large social stack-overflow"
+                       href="https://stackoverflow.com/users/7982074/alfredo-rodriguez"
+                       target="_blank">
                         <i class="fa fa-stack-overflow"></i></a>
-                    </div>
+                </div>
 
             </div>
 
@@ -98,6 +102,7 @@
 
     </div>
 
+    <!--Copyright Info-->
     <div class="footer-copyright">
         <div class="container">
             Copyright © 2017 <a class="brown-text text-lighten-3" href="https://www.linkedin.com/in/alfredo-wiesner">Alfredo
@@ -109,17 +114,17 @@
 
 
 <!--  Scripts-->
+
+<!--JQuery JS-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-
-<!-- Compiled and minified JavaScript -->
+<!-- Materialize JS -->
 <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-
 <script type="text/javascript">
 
-    $( document ).ready(function(){
+    //Allows Side Nav bar to collapse
+    $(document).ready(function () {
 
         $(".button-collapse").sideNav();
 

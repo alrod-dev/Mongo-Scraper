@@ -2,8 +2,7 @@
 Nav Bar/Header Styling
 */
 
-#navbar
-{
+#navbar {
     background-color: #1F2833;
 }
 
@@ -12,23 +11,19 @@ nav ul a:hover {
     color: #1F2833;
 }
 
-.material-icons
-{
+.material-icons {
     color: #474B4F;
 }
 
-.material-icons:hover
-{
+.material-icons:hover {
     color: #66FCF1;
 }
 
-.side-nav
-{
+.side-nav {
     transform: translateX(-100%);
 }
 
-.drag-target
-{
+.drag-target {
     left: 0px;
     touch-action: pan-y;
     -webkit-user-drag: none;
@@ -39,91 +34,77 @@ nav ul a:hover {
 Body
 */
 
-#banner1
-{
+#banner1 {
     display: block;
     transform: translate3d(-50%, 227px, 0px);
     filter: brightness(85%);
 }
 
-.header
-{
+/*Header CSS*/
+.header {
     color: white;
     margin-top: 5%;
 }
 
-.notIndex
-{
+.notIndex {
     margin-top: 18%;
 }
 
-.circle
-{
+/*Buttons*/
+.circle {
     margin-top: 3%;
 
 }
 
-.collection .collection-item
-{
+/*Collapsible Article Items*/
+.collection .collection-item {
     background-color: rgba(255, 255, 255, 0);
 }
 
-.collection .collection-item.avatar i.circle
-{
+.collection .collection-item.avatar i.circle {
     background-color: #474B4F;
     line-height: 180%;
 }
 
-.collection .collection-item.avatar:not(.circle-clipper)>.circle, .collection .collection-item.avatar :not(.circle-clipper)>.circle
-{
+.collection .collection-item.avatar:not(.circle-clipper) > .circle, .collection .collection-item.avatar :not(.circle-clipper) > .circle {
     width: 50px;
     height: 50px;
 }
 
-.collection .collection-item.avatar i.circle
-{
+.collection .collection-item.avatar i.circle {
     font-size: 25px;
     margin-top: 15px;
 }
 
-.collection .collection-item.avatar p
-{
+.collection .collection-item.avatar p {
     margin-left: 30%;
     margin-top: 0;
 }
 
-.collapsible-body
-{
+.collapsible-body {
     display: none;
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.collapsible-header i
-{
+.collapsible-header i {
     width: 0;
     margin-right: 1.5rem;
 }
 
-.material-icons:hover
-{
+.material-icons:hover {
     color: #d0d0d0;
 }
 
-.btn-floating
-{
+.btn-floating {
     background-color: #474B4F;
 }
 
-
-
-.btn-floating:hover
-{
+.btn-floating:hover {
     background-color: #45A29E;
 }
 
-.btn-floating.btn-large
-{
+.btn-floating.btn-large {
     float: right;
     margin-left: 69%;
     margin-top: 2%;
@@ -133,25 +114,20 @@ Body
 Footer
 */
 
-.page-footer
-{
+.page-footer {
     background-color: #1F2833;
     padding-bottom: 20px;
 }
 
-.waves-light
-{
+.waves-light {
     background-color: #474B4F;
 }
 
-
-.waves-light:hover
-{
+.waves-light:hover {
     background-color: #66FCF1;
     color: #1F2833;
 }
 
-.social:hover
-{
+.social:hover {
     background-color: #45A29E;
 }

@@ -7,6 +7,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
+var request = require("request");
 
 
 var PORT = 6969;
@@ -53,6 +54,7 @@ db.once("open", function () {
 //Routing initiated
 require("./routes/api-routing")(app);
 require("./routes/html-routing")(app);
+require("./public/assets/js/cheerio")(request);
 
 
 // Starts the server to begin listening
