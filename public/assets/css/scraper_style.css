@@ -57,6 +57,78 @@ Body
     margin-top: 18%;
 }
 
+.circle
+{
+    margin-top: 3%;
+
+}
+
+.collection .collection-item
+{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.collection .collection-item.avatar i.circle
+{
+    background-color: #474B4F;
+    line-height: 180%;
+}
+
+.collection .collection-item.avatar:not(.circle-clipper)>.circle, .collection .collection-item.avatar :not(.circle-clipper)>.circle
+{
+    width: 50px;
+    height: 50px;
+}
+
+.collection .collection-item.avatar i.circle
+{
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.collection .collection-item.avatar p
+{
+    margin-left: 30%;
+    margin-top: 0;
+}
+
+.collapsible-body
+{
+    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.collapsible-header i
+{
+    width: 0;
+    margin-right: 1.5rem;
+}
+
+.material-icons:hover
+{
+    color: #d0d0d0;
+}
+
+.btn-floating
+{
+    background-color: #474B4F;
+}
+
+
+
+.btn-floating:hover
+{
+    background-color: #45A29E;
+}
+
+.btn-floating.btn-large
+{
+    float: right;
+    margin-left: 69%;
+    margin-top: 2%;
+}
+
 /*
 Footer
 */
