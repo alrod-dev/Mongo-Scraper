@@ -98,7 +98,7 @@ module.exports = function (app, request) {
      */
 
     // GET route for getting all of the notes
-    app.get("/api/sports", function (req, res) {
+    app.get("/api/notes", function (req, res) {
 
         note.find(function (error, results) {
 

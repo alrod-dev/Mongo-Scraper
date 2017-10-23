@@ -56,6 +56,48 @@ Body
 
 }
 
+.input-field
+{
+    width: 30%;
+    align-content: center;
+    margin-left: 35%;
+    margin-right: 40%;
+    margin-top: 1%;
+}
+
+.select-wrapper span.caret
+{
+    color: #66FCF1;
+}
+
+.select-wrapper input.select-dropdown
+{
+    color: white;
+    border-bottom: 1px solid #66FCF1;
+}
+
+.dropdown-content
+{
+    background-color: #1F2833;
+    color: white;
+}
+
+.input-field label
+{
+    color: white;
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup
+{
+    color: #66FCF1;
+}
+
+/*.dropdown-content:hover*/
+/*{*/
+    /*background-color: #66FCF1;*/
+    /*color: #1F2833;*/
+/*}*/
+
 /*Collapsible Article Items*/
 .collection .collection-item {
     background-color: rgba(255, 255, 255, 0);
