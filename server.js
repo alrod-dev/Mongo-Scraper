@@ -30,9 +30,10 @@ app.set("view engine", "handlebars");
 
 
 //Routing initiated
-require("./routes/api-routing")(app);
 require("./routes/html-routing")(app);
-require("./public/assets/js/cheerio")(request);
+require("./routes/api-routing")(app, request);
+//require("./controller/articleController")(request);
+
 
 // requiring the news and notes models
 require('./models/Articles');

@@ -1,15 +1,12 @@
 // require mongoose and the database connection
-const db = require('../config/connection');
 const mongoose = require("mongoose");
 // Create Schema class
 const Schema = mongoose.Schema;
 
-
-
 // Create article schema
 const ArticleSchema = new Schema({
     // title is a required string
-    headline: {
+    title: {
         type: String,
         required: true
     },
@@ -24,7 +21,7 @@ const ArticleSchema = new Schema({
         required: true
     },
     //  content is a required string
-    content: {
+    text: {
         type: String,
         required: true
     },

@@ -1,7 +1,7 @@
 {
   "name": "mongo-scraper",
   "version": "1.0.0",
-  "description": "MongoDB application that scrapes articles from online websites and lets the user add comments to that article that has been saved.",
+  "link": "MongoDB application that scrapes articles from online websites and lets the user add comments to that article that has been saved.",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.2",
