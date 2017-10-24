@@ -5,12 +5,12 @@ var mongoose = require('mongoose');
 // Set mongoose to leverage JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoScrapper";
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/mongoScrapper");
+mongoose.connect(MONGODB_URI, {useMongoClient: true});
 
 var db = mongoose.connection;
-
 
 // Show any mongoose errors
 db.on("error", function (error) {

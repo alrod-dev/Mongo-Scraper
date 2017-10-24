@@ -7,6 +7,8 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var path = require("path");
 var request = require("request");
+var mongoose = require("mongoose");
+
 
 var PORT = 6969;
 
@@ -33,12 +35,12 @@ app.set("view engine", "handlebars");
 require("./routes/html-routing")(app);
 require("./routes/api-routing")(app, request);
 //require("./controller/articleController")(request);
+require("./config/connection");
 
 
 // requiring the news and notes models
 require('./models/Articles');
 require('./models/Notes');
-
 
 // Starts the server to begin listening
 // =============================================================
