@@ -7,8 +7,6 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var path = require("path");
 var request = require("request");
-var mongoose = require("mongoose");
-
 
 var PORT = 6969;
 
