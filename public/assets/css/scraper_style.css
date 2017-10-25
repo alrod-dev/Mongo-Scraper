@@ -94,11 +94,20 @@ Body
     color: #66FCF1;
 }
 
-/*.dropdown-content:hover*/
+/*.collapsible-body*/
 /*{*/
-    /*background-color: #66FCF1;*/
-    /*color: #1F2833;*/
+    /*margin-left: 15%;*/
 /*}*/
+
+.card-image
+{
+    width: 200%;
+}
+
+h2.header
+{
+    color: #1F2833;
+}
 
 /*Collapsible Article Items*/
 .collection .collection-item {
@@ -149,10 +158,17 @@ Body
 }
 
 .btn-floating.btn-large {
-    float: right;
-    margin-left: 69%;
-    margin-top: 2%;
+
 }
+
+.addButton
+{
+    float: right;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 40%;
+}
+
 
 /*
 Footer

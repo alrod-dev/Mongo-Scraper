@@ -10,6 +10,16 @@ const ArticleSchema = new Schema({
         type: String,
         required: true
     },
+    //  content is a required string
+    text: {
+        type: String,
+        required: true
+    },
+    //  author is a required string
+    author: {
+        type: String,
+        required: true
+    },
     // // // link is a required string
     link: {
         type: String,
@@ -17,11 +27,6 @@ const ArticleSchema = new Schema({
     },
     //  image is a required string
     image: {
-        type: String,
-        required: true
-    },
-    //  content is a required string
-    text: {
         type: String,
         required: true
     },

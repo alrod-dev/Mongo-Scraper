@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--CSS Templates-->
-
-    <!-- Materialize Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-    <!--Bootstrap Font Awesome Icons-->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!--Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{css}}">
+    {{#each css}}
+        <link rel="stylesheet" href="{{this}}" type="text/css">
+    {{/each}}
 
     <link rel="icon" href="{{icon}}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
 
     <title>{{title}}</title>
 
@@ -79,19 +72,19 @@
 
 
                 <div class="col s4"><a class="waves-effect btn-floating btn-large social github"
-                                       href="https://github.com/alrod909" target="_blank"><i
+                                       href="{{github}}" target="_blank"><i
                         class="fa fa-github"></i></a>
                 </div>
 
                 <div class="col s4"><a class="waves-effect btn-floating btn-large social linkedin"
-                                       href="https://www.linkedin.com/in/alfredo-wiesner" target="_blank"><i
+                                       href="{{linkedin}}" target="_blank"><i
                         class="fa fa-linkedin"></i></a>
                 </div>
 
 
                 <div class="col s4">
                     <a class="waves-effect btn-floating btn-large social stack-overflow"
-                       href="https://stackoverflow.com/users/7982074/alfredo-rodriguez"
+                       href="{{stackoverflow}}"
                        target="_blank">
                         <i class="fa fa-stack-overflow"></i></a>
                 </div>
@@ -114,12 +107,67 @@
 
 
 <!--  Scripts-->
+{{#each js}}
+    <script rel="stylesheet" src="{{this}}" type="text/javascript"></script>
+{{/each}}
 
-<!--JQuery JS-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- Materialize JS -->
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script id="article-template" type="text/x-handlebars-template">
+
+
+        <div class="row" data-id="{{_id}}">
+
+            <ul class="collapsible" data-collapsible="accordion">
+
+                <li>
+
+                    <div class="collapsible-header waves-effect waves-purple">
+
+                        <ul class="collection">
+
+                            <li class="collection-item avatar"><i
+                                    class="material-icons circle">find_in_page</i>
+                                <span class="title"><h5>{{title}}</h5></span>
+                                <label>{{author}}<br></label>
+
+                            </li>
+
+                        </ul>
+
+                        <a class="btn-floating btn-large waves-effect waves-red"><i class="material-icons">add</i></a>
+
+                    </div>
+
+
+                    <div class="collapsible-body">
+
+                        <div class="col s12 m12">
+                            <h2 class="header">{{title}}</h2>
+                            <div class="card horizontal">
+                                <div class="card-image">
+                                    <img src="{{image}}">
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <p>{{text}}</p>
+                                    </div>
+                                    <div class="card-action">
+                                        <label>{{author}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+</script>
 
 <script type="text/javascript">
 
