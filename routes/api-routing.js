@@ -17,6 +17,11 @@ module.exports = function (app, request) {
 
     // A GET route for scraping the nytimes website
     app.get("/api/scrape", function (req, res) {
+
+        var category = $(".active.selected").val().toLowerCase().trim();
+
+        console.log(category);
+
         // First, we grab the body of the html with request
         axios.get("https://www.nytimes.com/section/sports").then(function (response) {
             // Then, we load that into cheerio and save it to $ for a shorthand selector
